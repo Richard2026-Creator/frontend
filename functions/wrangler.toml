@@ -1,0 +1,17 @@
+# Cloudflare Worker Configuration
+name = "imprint-api"
+main = "worker.ts"
+compatibility_date = "2024-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "imprint-production"
+database_id = "<YOUR_D1_DATABASE_ID>"
+
+[[r2_buckets]]
+binding = "IMAGES_BUCKET"
+bucket_name = "imprint-images"
+
+[vars]
+AUTH_ISSUER = "https://clerk.your-domain.com"
+AUTH_AUDIENCE = "your-audience"
